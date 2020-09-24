@@ -1,0 +1,34 @@
+name: 'PR Title'
+author: 'Clowd Haus, LLC'
+description: 'GitHub action for checking pull request titles'
+branding:
+  icon: 'git-pull-request'
+  color: 'purple'
+inputs:
+  github-token:
+    description: 'GitHub token which contains access to the repository (secrets.GITHUB_TOKEN)'
+    required: true
+  title-regex:
+    description: 'Regex pattern that PR title is evaluated against'
+    required: false
+    default: '.*'
+  on-fail-request-changes:
+    description: Determines whether changes are required when the title does not match the pattern
+    required: false
+    default: false
+  on-fail-add-comment:
+    description: Determines whether a comment should be left when the title does not match the pattern
+    required: false
+    default: true
+  on-fail-message:
+    description: Message posted to user via requested changes or through a comment
+    required: false
+    default: ':warning: PR title does not match the requested pattern: `%regex%`'
+  on-fail-fail-action:
+    description: Determines whether the action should be marked as failed when title does not match pattern
+    required: false
+    default: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

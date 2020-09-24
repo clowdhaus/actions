@@ -1,0 +1,14 @@
+{
+  "name": "@actions/pr-title",
+  "version": "0.0.0",
+  "description": "GitHub action for checking pull request titles",
+  "author": "clowd.haus",
+  "license": "Apache-2.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@actions/github": "^4.0.0"
+  },
+  "scripts": {
+    "compile": "ncc build -m"
+  }
+}
