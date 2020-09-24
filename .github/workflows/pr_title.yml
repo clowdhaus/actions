@@ -1,0 +1,27 @@
+name: pr-title
+
+on:
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+    paths:
+      - 'pr-title/**'
+      - 'package.json'
+
+jobs:
+  prTitle:
+    name: Evaluate PR title pattern
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Check PR Title
+        uses: ./pr-title
+        with:
+          title-regex: '^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z ]+\))?: [\w ]+$'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
