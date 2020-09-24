@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/actions.png" alt="github-actions" height="256px">
+  <img src="actions.png" alt="github-actions" height="256px">
 </p>
 <h1 style="font-size: 56px; margin: 0; padding: 0;" align="center">
   actions
@@ -15,13 +15,13 @@ Collection of :octocat: GitHub actions
 
 | Action                                                                       | Local Action Tests                                                                          |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [`clowdhaus/actions/pr-title@master`](pr-title) | ![PR Title](https://github.com/clowdhaus/actions/workflows/pr-title/badge.svg) |
+| [`clowdhaus/actions/pr-title@master`](../pr-title) | ![PR Title](https://github.com/clowdhaus/actions/workflows/pr-title/badge.svg) |
 
 ## Usage
 
 See individual action directory for details on usage and examples.
 
-- [PR Title](pr-title) - action for checking pull request titles
+- [PR Title](../pr-title) - action for checking pull request titles
 
 ## Getting Started
 
