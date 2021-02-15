@@ -8,14 +8,14 @@
   <img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg" alt="Maintained with lerna">
   <img src="https://badgen.net/badge/TypeScript/strict%20%F0%9F%92%AA/blue" alt="Strict TypeScript">
   <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly">
-  <img src="https://snyk.io/test/github/clowdhaus/actions/master/badge.svg" alt="Known Vulnerabilities">
+  <img src="https://snyk.io/test/github/clowdhaus/actions/main/badge.svg" alt="Known Vulnerabilities">
 </p>
 
 Collection of :octocat: GitHub actions
 
 | Action                                                                       | Local Action Tests                                                                          |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [`clowdhaus/actions/pr-title@master`](../pr-title) | ![PR Title](https://github.com/clowdhaus/actions/workflows/pr-title/badge.svg) |
+| [`clowdhaus/actions/pr-title@main`](../pr-title) | ![PR Title](https://github.com/clowdhaus/actions/workflows/pr-title/badge.svg) |
 
 ## Usage
 

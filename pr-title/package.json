@@ -5,10 +5,12 @@
   "author": "clowd.haus",
   "license": "Apache-2.0",
   "main": "index.ts",
+  "scripts": {
+    "build": "ncc build -m",
+    "lint": "eslint '*.ts' --ignore-path ../.gitignore --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@actions/github": "^4.0.0"
-  },
-  "scripts": {
-    "compile": "ncc build -m"
   }
 }

@@ -54,7 +54,8 @@ async function dismissReview(pullRequest: { owner: string; repo: string; number:
   });
 
   reviews.data.forEach((review) => {
-    if (review.user.login == 'github-actions[bot]') {
+    const user = review.user;
+    if (user && user.login == 'github-actions[bot]') {
       void octokit.pulls.dismissReview({
         owner: pullRequest.owner,
         repo: pullRequest.repo,

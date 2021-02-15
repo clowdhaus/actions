@@ -10,7 +10,7 @@ GitHub action for checking pull request titles against a provided pattern - comm
 ## Usage
 
 ```yml
-- uses: clowdhaus/actions/pr-title@master
+- uses: clowdhaus/actions/pr-title@main
   with:
     # GitHub token which contains access to the repository
     github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -31,7 +31,7 @@ GitHub action for checking pull request titles against a provided pattern - comm
 ### Comment on pull request when the title does not match the default pattern provided
 
 ```yml
-- uses: clowdhaus/actions/pr-title@master
+- uses: clowdhaus/actions/pr-title@main
   with:
     github-token: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -39,7 +39,7 @@ GitHub action for checking pull request titles against a provided pattern - comm
 ### Request changes on pull request when the title does not match the pattern provided
 
 ```yml
-- uses: clowdhaus/actions/pr-title@master
+- uses: clowdhaus/actions/pr-title@main
   with:
     title-regex: '^\[JIRA-[0-9]{1,4}]'
     on-fail-request-changes: true
