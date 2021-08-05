@@ -37,7 +37,7 @@ async function run(): Promise<void> {
 }
 
 function createReview(comment: string, pullRequest: { owner: string; repo: string; number: number }) {
-  void octokit.pulls.createReview({
+  void octokit.rest.pulls.createReview({
     owner: pullRequest.owner,
     repo: pullRequest.repo,
     pull_number: pullRequest.number,
@@ -47,7 +47,7 @@ function createReview(comment: string, pullRequest: { owner: string; repo: strin
 }
 
 async function dismissReview(pullRequest: { owner: string; repo: string; number: number }) {
-  const reviews = await octokit.pulls.listReviews({
+  const reviews = await octokit.rest.pulls.listReviews({
     owner: pullRequest.owner,
     repo: pullRequest.repo,
     pull_number: pullRequest.number,
@@ -56,7 +56,7 @@ async function dismissReview(pullRequest: { owner: string; repo: string; number:
   reviews.data.forEach((review) => {
     const user = review.user;
     if (user && user.login == 'github-actions[bot]') {
-      void octokit.pulls.dismissReview({
+      void octokit.rest.pulls.dismissReview({
         owner: pullRequest.owner,
         repo: pullRequest.repo,
         pull_number: pullRequest.number,
