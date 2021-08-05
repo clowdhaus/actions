@@ -1,6 +1,6 @@
 {
   "name": "@actions/pr-title",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "GitHub action for checking pull request titles",
   "author": "clowd.haus",
   "license": "Apache-2.0",
