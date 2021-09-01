@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.4 (2021-09-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies to latest and re-compile action to patch reported vulnerabilities ([6b7266f](https://github.com/clowdhaus/actions/commit/6b7266fc5ca49b7f67a80551803387132bd8bec0))
+
+
+
+
+
 ## 0.1.3 (2021-08-05)
 
 **Note:** Version bump only for package @actions/pr-title
