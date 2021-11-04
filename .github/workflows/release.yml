@@ -26,9 +26,10 @@ jobs:
         with:
           node-version: 14
 
+      - run: yarn
+      - run: yarn build
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE }}
-        run: |
-          yarn
-          yarn release
+        run: yarn release
