@@ -28,6 +28,14 @@ jobs:
 
       - run: yarn
       - run: yarn build
+      - name: Setup git identity
+        env:
+          GH_RELEASE_TOKEN: ${{ secrets.SEMANTIC_RELEASE }}
+        run: |
+          git config --local user.name "bryantbiggs"
+          git config --local user.email "${{ secrets.EMAIL }}"
+          git remote set-url origin "https://${GITHUB_ACTOR}:${GH_RELEASE_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          echo "Git remote origin URL: $(git remote get-url origin)"
 
       - name: Release
         env:

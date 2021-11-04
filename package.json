@@ -24,7 +24,7 @@
     "all": "yarn lint && yarn build",
     "build": "lerna run build",
     "lint": "lerna run lint",
-    "release": "lerna version --conventional-commits --create-release github --yes --loglevel verbose"
+    "release": "lerna version --conventional-commits --create-release github --yes"
   },
   "husky": {
     "hooks": {
