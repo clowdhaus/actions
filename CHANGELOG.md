@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5](https://github.com/clowdhaus/actions/compare/v0.1.4...v0.1.5) (2021-11-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies to latest and re-compile action artifact ([2d2f808](https://github.com/clowdhaus/actions/commit/2d2f808cb7335a39b423c7ed59075bd090b96a03))
+
+
+
+
+
 ## 0.1.4 (2021-09-01)
 
 
