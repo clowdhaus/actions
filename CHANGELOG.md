@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/clowdhaus/actions/compare/v0.2.0...v0.3.0) (2022-09-03)
+
+
+### Features
+
+* Update dependencies to patch reported vulnerabilities ([338a4a4](https://github.com/clowdhaus/actions/commit/338a4a4e082f8e567e2a37c99a2d9bb7af1781dd))
+
+
+
+
+
 # [0.2.0](https://github.com/clowdhaus/actions/compare/v0.1.5...v0.2.0) (2022-07-28)
 
 
