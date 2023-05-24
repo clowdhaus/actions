@@ -28,6 +28,10 @@ inputs:
     description: Determines whether the action should be marked as failed when title does not match pattern
     required: false
     default: true
+  ignored-contributors:
+    description: 'Determines users that are exempt from this action'
+    required: false
+    default: ''
 
 runs:
   using: 'node16'

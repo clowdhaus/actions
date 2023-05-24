@@ -24,11 +24,13 @@ GitHub action for checking pull request titles against a provided pattern - comm
     on-fail-message: ''
     # Determines whether the action should be marked as failed when title does not match pattern
     on-fail-fail-action: true|false
+    # Comma-delimited string of Github Usernames who are exempted from this rule (e.g. dependabot[bot])
+    ignored-contributors: ''
 ```
 
 ## Scenarios
 
-### Comment on pull request when the title does not match the default pattern provided
+### Comment on pull request when the title does not match the default pattern
 
 ```yml
 - uses: clowdhaus/actions/pr-title@main
@@ -46,4 +48,13 @@ GitHub action for checking pull request titles against a provided pattern - comm
     on-fail-add-comment: false
     on-fail-message: 'Your pull request title does not match the provided pattern: `%regex%`'
     github-token: ${{ secrets.GITHUB_TOKEN }}
+```
+
+### Comment on pull request when the title does not match the default pattern... unless the user is dependabot
+
+```yml
+- uses: clowdhaus/actions/pr-title@main
+  with:
+    github-token: ${{ secrets.GITHUB_TOKEN }}
+    ignored-contributors: 'dependabot[bot]'
 ```

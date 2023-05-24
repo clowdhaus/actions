@@ -3,16 +3,23 @@ import * as github from '@actions/github';
 
 const githubToken = core.getInput('github-token', { required: true });
 const titleRegexInput = core.getInput('title-regex');
-const onFailrequestChanges = core.getInput('on-fail-request-changes') == 'true';
+const onFailRequestChanges = core.getInput('on-fail-request-changes') == 'true';
 const onFailAddComment = core.getInput('on-fail-add-comment') == 'true';
 const onFailMessage = core.getInput('on-fail-message');
 const onFailFailAction = core.getInput('on-fail-fail-action') == 'true';
+const ignoredContributors = (core.getInput('ignored-contributors') || '').split(',').map((s) => s.trim());
 
 const octokit = github.getOctokit(githubToken);
 
 async function run(): Promise<void> {
   const githubContext = github.context;
   const pullRequest = githubContext.issue;
+
+  core.debug(`Ignored Contributors: ${ignoredContributors.length}`);
+  if (ignoredContributors.includes(githubContext.actor)) {
+    core.debug('Ignoring actor');
+    return;
+  }
 
   const titleRegex = new RegExp(titleRegexInput);
   const title: string = (githubContext.payload.pull_request?.title as string) ?? '';
@@ -23,14 +30,14 @@ async function run(): Promise<void> {
 
   const titleMatchesRegex: boolean = titleRegex.test(title);
   if (!titleMatchesRegex) {
-    if (onFailrequestChanges || onFailAddComment) {
+    if (onFailRequestChanges || onFailAddComment) {
       createReview(comment, pullRequest);
     }
     if (onFailFailAction) {
       core.setFailed(comment);
     }
   } else {
-    if (onFailrequestChanges) {
+    if (onFailRequestChanges) {
       await dismissReview(pullRequest);
     }
   }
