@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/clowdhaus/actions/compare/v0.4.0...v0.5.0) (2024-05-05)
+
+
+### Bug Fixes
+
+* Update CI worklow action versions ([a4340f2](https://github.com/clowdhaus/actions/commit/a4340f2a8fdb96808a2bf6b3089e6320d1782d52))
+
+
+### Features
+
+* Update action runtime to NodeJS v20 ([#16](https://github.com/clowdhaus/actions/issues/16)) ([b8b41e8](https://github.com/clowdhaus/actions/commit/b8b41e88892a53dd9b3f684c7c82e4cbb5fd0947))
+
+
+
+
+
 # [0.4.0](https://github.com/clowdhaus/actions/compare/v0.3.1...v0.4.0) (2023-05-24)
 
 ### Features

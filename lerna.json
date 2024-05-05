@@ -1,5 +1,7 @@
 {
-  "packages": ["pr-title"],
+  "packages": [
+    "pr-title"
+  ],
   "npmClient": "yarn",
-  "version": "0.4.0"
+  "version": "0.5.0"
 }
