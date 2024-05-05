@@ -7,10 +7,9 @@
   "main": "index.ts",
   "scripts": {
     "build": "ncc build -m",
-    "lint": "eslint '*.ts' --ignore-path ../.gitignore --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@actions/github": "^5.0.3"
+    "@actions/github": "^6.0.0"
   }
 }
