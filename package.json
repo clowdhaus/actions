@@ -50,7 +50,7 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/js": "^9.2.0",
-    "@types/node": "^20.12.8",
+    "@types/node": "^22.13.0",
     "@vercel/ncc": "^0.38.1",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
@@ -59,10 +59,7 @@
     "lerna": "^8.1.2",
     "lint-staged": "^15.2.2",
     "typescript": "^5.4.5",
-    "typescript-eslint": "^7.8.0"
-  },
-  "resolutions": {
-    "tar": ">=6.2.1"
+    "typescript-eslint": "^8.22.0"
   },
   "command": {
     "version": {
